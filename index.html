@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    TESTING TESTING TESTING
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YeTea - Traditional Korean Tea Experience</title>
+    <meta name="description" content="YeTea celebrates the timeless art of Korean tea. Discover premium teas, traditional brewing methods, and the simple joy of a perfect cup.">
+    <meta name="keywords" content="Korean tea, traditional tea, premium tea, tea brewing, YeTea, 옛차">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍃</text></svg>">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="yeti-logo.svg" alt="YeTea Yeti" class="nav-yeti">
+                <span class="nav-brand">YeTea</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Our Story</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#products" class="nav-link">Teas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#payment" class="nav-link">Order</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="letters.svg" alt="YeTea Logo" class="main-logo">
+                </div>
+                <p class="hero-description">
+                    In Korean, '옛' [yet] speaks of what is timeless — old, treasured, and good. 
+                    At YeTea, we celebrate the enduring things in life: truth, kindness, and the simple joy of a cup of tea. 
+                    Some things never fade; they only grow richer with time.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">Explore Our Teas</a>
+                    <a href="#about" class="btn btn-secondary">Our Story</a>
+                </div>
+            </div>
+            <div class="hero-yeti">
+                <div class="yeti-character">
+                    <img src="yeti-logo.svg" alt="YeTea Yeti" class="yeti-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Story</h2>
+                <p>Where tradition meets the timeless art of tea</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>The Art of Timeless Tea</h3>
+                    <p>
+                        Founded on the principle that some things only grow richer with time, YeTea celebrates 
+                        the ancient wisdom of Korean tea culture. Each blend is carefully crafted using traditional 
+                        methods passed down through generations, honoring the delicate balance between nature's gifts 
+                        and human artistry.
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h4>3+</h4>
+                            <p>Generations of Craft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="rice.jpg" alt="Traditional Rice" class="about-rice-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Premium Teas</h2>
+                <p>Carefully selected and traditionally crafted for the perfect cup</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cinnamon.jpeg" alt="Cinnamon Punch Tea" class="tea-image">
+                    </div>
+                    <h3>Cinnamon Punch Tea</h3>
+                    <p>Warm and invigorating, this powerful blend supports healthy digestion and provides natural anti-inflammatory properties. Rich in antioxidants, it helps reduce inflammation throughout the body while promoting optimal gut health and digestive comfort.</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="solomon.jpg" alt="Solomon's Root Tea" class="tea-image">
+                    </div>
+                    <h3>Solomon's Root Tea</h3>
+                    <p>An ancient herbal remedy known for its remarkable digestive benefits and potent anti-inflammatory effects. This traditional blend supports healthy gut function, reduces inflammation, and promotes overall digestive wellness with its time-tested healing properties.</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="raisin.jpg" alt="Oriental Raisin Tea" class="tea-image">
+                    </div>
+                    <h3>Oriental Raisin Tea</h3>
+                    <p>Naturally sweet and soothing, this unique blend is specially formulated for digestive health and anti-inflammatory support. Packed with beneficial compounds that promote gut health, reduce inflammation, and support your body's natural healing processes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section id="payment" class="payment">
+        <div class="container">
+            <div class="section-header">
+                <h2>Make a Payment</h2>
+                <p>Secure payment processing with Stripe - your payment information is always protected</p>
+            </div>
+            <div class="payment-content">
+                <div class="payment-info">
+                    <h3>Payment Instructions</h3>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Custom Pricing</h4>
+                            <p>After discussing your specific tea needs and quantities, please enter the agreed-upon amount below to complete your payment.</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Secure Processing</h4>
+                            <p>All payments are processed securely through Stripe. Your payment information is encrypted and never stored on our servers.</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Fast Fulfillment</h4>
+                            <p>Once payment is confirmed, we'll begin preparing your custom tea order for shipping.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-form-section">
+                    <div class="payment-form">
+                        <form id="payment-form">
+                            <div class="form-group">
+                                <label for="amount">Payment Amount ($)</label>
+                                <input type="number" id="amount" name="amount" placeholder="0.00" step="0.01" min="1" required>
+                                <small class="form-help">Enter the amount we discussed for your custom tea order</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="card-element">Card Information</label>
+                                <div id="card-element" class="card-element">
+                                    <!-- Stripe Elements will create form elements here -->
+                                </div>
+                                <div id="card-errors" role="alert"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" name="address" placeholder="123 Main St" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" name="city" placeholder="City" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <input type="text" id="state" name="state" placeholder="State" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">ZIP Code</label>
+                                    <input type="text" id="zip" name="zip" placeholder="12345" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="notes">Order Notes (Optional)</label>
+                                <textarea id="notes" name="notes" placeholder="Any special instructions or notes about your order..." rows="3"></textarea>
+                            </div>
+                            <button type="submit" id="submit-button" class="btn btn-primary">
+                                <span id="button-text">Process Payment</span>
+                                <div id="spinner" class="spinner hidden"></div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Connect With Us</h2>
+                <p>Share your tea journey with us</p>
+            </div>
+            <div class="contact-content">
+                <form class="contact-form" action="mailto:apuma735@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="letters.svg" alt="YeTea Yeti" class="footer-yeti">
+                        <span class="footer-brand-text">YeTea</span>
+                    </div>
+                    <p>Celebrating the timeless art of tea, where tradition meets tranquility.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/yetea.co/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Our Story</a></li>
+                        <li><a href="#products">Teas</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#payment">Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Premium Teas</h4>
+                    <ul>
+                        <li><a href="#products">Cinnamon Punch Tea</a></li>
+                        <li><a href="#products">Solomon's Root Tea</a></li>
+                        <li><a href="#products">Oriental Raisin Tea</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 YeTea. All rights reserved. | Some things never fade; they only grow richer with time.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
